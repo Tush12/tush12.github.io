@@ -12,13 +12,8 @@
   <header id="header">
     <div class="container">
       <h1>Tushar Bhavnani</h1>
-      <div class="menu-toggle" id="mobile-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav id="nav-menu">
-        <ul>
+      <nav>
+        <ul class="desktop-nav">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#profile">Profile</a></li>
@@ -28,9 +23,31 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="mobile-theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
     </div>
   </header>
-  
+
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWSJJP5X00"></script>
 <script>
@@ -41,7 +58,7 @@
   gtag('config', 'G-MWSJJP5X00');
 </script>
 
-  <  <section id="home" class="home">
+  <section id="home" class="home">
     <div class="container home-text glass">
       <h2>I am <span class="highlight typewriter" id="typed-text"></span></h2>
       <p>Scroll to view more</p>
@@ -53,7 +70,7 @@
       <h2>About Me</h2>
       <div class="content">
         <img src="images/profile-photo.jpg" alt="Profile Photo" class="profile-photo">
-        <p>I’m a Data Analyst at TradeLink Technologies, focusing on using data to drive meaningful change. I enjoy diving into data analysis, web and app development, and machine learning to help solve real-world problems.</p>
+        <p>I'm a Data Analyst at TradeLink Technologies, focusing on using data to drive meaningful change. I enjoy diving into data analysis, web and app development, and machine learning to help solve real-world problems.</p>
       </div>
     </div>
   </section>
@@ -189,6 +206,8 @@
   </footer>
 
   <script src="scripts.js"></script>
+  <script src="animations.js"></script>
+  <script src="theme.js"></script>
   
 </body>
 </html>
