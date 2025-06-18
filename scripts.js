@@ -95,3 +95,27 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     }
   });
 });
+
+// Typewriter effect
+  const typedText = document.getElementById("typed-text");
+  const words = ["Tushar Bhavnani", "a Developer", "a Data Analyst"];
+  let wordIndex = 0, charIndex = 0, isDeleting = false;
+  function type() {
+    let word = words[wordIndex];
+    if (isDeleting) {
+      typedText.textContent = word.substring(0, charIndex--);
+    } else {
+      typedText.textContent = word.substring(0, charIndex++);
+    }
+    if (!isDeleting && charIndex === word.length + 1) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      setTimeout(type, 200);
+    } else {
+      setTimeout(type, isDeleting ? 80 : 150);
+    }
+  }
+  type();
